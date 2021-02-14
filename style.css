@@ -1,0 +1,360 @@
+:root{
+    --brown: #6E2C00;
+}
+
+*{ /*seletor universal de tags*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+	width: 100vw;
+    height: 100vh;
+    font-size: 93.75%; /*15 px*/
+}
+
+body{
+	width: 950px;
+	height: auto;
+
+	margin: auto;
+	position: relative;
+
+	font-family: 'Bebas Neue', cursive;
+	background-image: url(./images/fundo.jpg);
+	background-size: cover;
+}
+  
+#container{
+	width: 950px;
+	height: 630px;
+    padding: 1rem;
+    margin-top: 10%;
+
+	border-radius: 0.25rem;
+	border: black 0.1rem solid;
+    background-image: url(./images/fundo_game.jpg);
+	background-size: cover;
+}
+
+#home{
+	width: 100%;
+	height: 100%;
+    padding: 1rem 2rem;
+
+	border-radius: 0.25rem;
+	background-color: rgba(248, 155, 93, 0.3);
+}
+
+section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 2rem;
+}
+
+#home #logo img{
+    width: 100%;
+}
+
+#home #content-box img{
+    width: 150px;
+	margin: 12rem 0 0 1rem;
+}
+
+#home #content-box p{
+    color: black;
+	margin-top: 14rem;
+    font-size: 1.5rem;
+    margin-left: 2rem;
+}
+
+#home #content-box span{
+	color: white;
+}
+
+#home button{
+    border: none;
+    padding: 1rem 1.5rem;
+    border-radius: 0.25rem;
+    
+    color: white;
+	font-weight: bold;
+    background-color: black;
+
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+
+	transition: transform 0.5s;
+  	transform: translateY(0) scale(0.9);
+}
+
+#home button:hover{
+	transform: translateY(5px) scale(1);
+}
+
+#home button img{
+	width: 20px;
+	margin-right: 0.5rem;
+}
+
+/* ==================== ELEMENTS ==================== */
+#player{
+	left:8px;
+	top:179px;
+
+	width:256px;
+	height:66px;
+	
+	position:absolute;
+	background-image:url(./images/apache.png);
+}
+
+#enemy1{
+	top: 253px;
+	left: 689px;
+
+	width: 256px;
+	height: 66px;
+	
+	position: absolute;
+	background-image:url(./images/inimigo1.png);
+}
+
+#enemy2{
+	top: 447px;
+	left: 775px;
+
+	width: 165px;
+	height: 70px;
+	
+	position: absolute;
+	background-image: url(./images/inimigo2.png);
+}
+
+#ally{
+	top: 464px;
+	left: 10px;
+
+	width: 44px;
+	height: 51px;
+	
+	position: absolute;
+	background-image:url(./images/amigo.png);
+}
+
+/* ==================== ANIMATIONS ==================== */
+.anima1{
+	background-image: url(./images/helicoptero.png);
+	animation: play .5s steps(2) infinite;
+    -webkit-animation: play .5s steps(2) infinite;
+    -moz-animation: play .5s steps(2) infinite;
+    -ms-animation: play .5s steps(2) infinite;
+    -o-animation: play .5s steps(2) infinite;
+}
+
+.anima2{
+    background-image: url(./images/inimigo1.png);
+    animation: play .5s steps(2) infinite;
+    -webkit-animation: play .5s steps(2) infinite;
+    -moz-animation: play .5s steps(2) infinite;
+    -ms-animation: play .5s steps(2) infinite;
+    -o-animation: play .5s steps(2) infinite; 
+}
+
+@keyframes play{
+	from{ background-position: 0px; }
+	to{ background-position: -512px; }
+}
+
+/* propriedades para reconhecimento de animação nos browsers */
+@-webkit-keyframes play{ /* chrome */
+   from{ background-position: 0px; }
+     to{ background-position: -512px; }
+}
+
+@-moz-keyframes play{ /* mozilla */
+   from{ background-position: 0px; }
+     to{ background-position: -512px; }
+}
+
+@-ms-keyframes play{ /* explorer */
+   from{ background-position: 0px; }
+   to{ background-position: -512px; }
+}
+
+@-o-keyframes play{ /* opera */
+   from{ background-position: 0px; }
+   to{ background-position: -512px; }
+}
+
+.anima3{
+	background-image: url(./images/amigo.png);
+	animation: play2 .9s steps(12) infinite;
+	-webkit-animation: play2 .9s steps(12) infinite;
+    -moz-animation: play2 .9s steps(12) infinite;
+    -ms-animation: play2 .9s steps(12) infinite;
+    -o-animation: play2 .9s steps(12) infinite;
+}
+
+@keyframes play2{
+	from{ background-position: 0px; }
+	to{ background-position: -528px; }
+}
+
+@-webkit-keyframes play2{
+   from{ background-position: 0px; }
+   to{ background-position: -528px; }
+}
+
+@-moz-keyframes play2{
+   from{ background-position: 0px; }
+   to{ background-position: -528px; }
+}
+
+@-ms-keyframes play2{
+   from{ background-position: 0px; }
+   to{ background-position: -528px; }
+}
+
+@-o-keyframes play2{
+   from{ background-position: 0px; }
+   to{ background-position: -528px; }
+}
+
+.anima4{
+	width: 44px;
+	height: 51px;
+	background-image: url(./images/amigo_morte.png);
+	animation:play3 .5s steps(7) infinite;
+	-webkit-animation: play3 .5s steps(7) infinite;
+    -moz-animation: play3 .5s steps(7) infinite;
+    -ms-animation: play3 .5s steps(7) infinite;
+    -o-animation: play3 .5s steps(7) infinite;
+}
+
+@keyframes play3{
+	from{ background-position: 0px; }
+	to{ background-position: -308px; }
+}
+
+@-webkit-keyframes play3{
+   from{ background-position: 0px; }
+   to{ background-position: -308px; }
+}
+
+@-moz-keyframes play3{
+   from{ background-position: 0px; }
+   to{ background-position: -308px; }
+}
+
+@-ms-keyframes play3{
+   from{ background-position: 0px; }
+   to{ background-position: -308px; }
+}
+
+@-o-keyframes play3{
+   from{ background-position: 0px; }
+   to{ background-position: -308px; }
+}
+
+/* ==================== ACTIONS ==================== */
+#shot{
+	width: 50px;
+	height: 8px;
+	position: absolute;
+	background-image: url(./images/disparo.png);
+}
+
+#explosion1{
+	width: 15px;
+	height: 87px;
+	position: absolute;
+}
+
+#explosion2{
+	width: 15px;
+	height: 87px;
+	position: absolute;
+}
+
+#explosion3{
+	width: 44px;
+	height: 51px;
+	position: absolute;
+}
+
+/* ==================== SCORE BOARD ====================*/
+#scoreboard{
+	width: 450px;
+	height: 50px;
+	left: 20px;
+	position: absolute;
+}
+
+h2{
+	color: white;
+	font-size: 15px;
+	font-family: 'Press Start 2P', cursive;
+}
+
+/* ==================== LIFE ====================*/
+#energy{
+	top: 7px;	
+	left: 790px;
+	width: 140px;
+	height: 38px;
+	position: absolute;
+}
+
+/* ===================== GAME OVER =====================*/
+#end{
+	width: 50%;
+	padding: 2rem;
+	text-align: center;
+	margin: 100px auto 0 auto;
+	background-color: rgba(220, 118, 51, 0.5);
+}
+
+h1{
+	color: white;
+	font-size: 40px;
+	margin-top: 2rem;
+	font-family: 'Press Start 2P', cursive;
+}
+
+#end p{
+	color: white;
+	font-size: 30px;
+	margin-top: 5rem;
+}
+
+#end button{
+	border: none;
+	margin-top: 4rem;
+    padding: 1rem 2rem;
+    border-radius: 0.25rem;
+    
+    color: white;
+	font-weight: bold;
+    background-color: var(--brown);
+
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+
+	transition: transform 0.5s;
+  	transform: translateY(0) scale(0.9);
+}
+
+#end button:hover{
+	transform: translateY(5px) scale(1);
+}
+
+#end button img{
+	width: 20px;
+	margin-right: 1rem;
+}
